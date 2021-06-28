@@ -15,4 +15,8 @@ import java.util.List;
 public interface IPruebaService {
     
     List<Prueba> getAll();
+    Prueba add(Prueba prueba);
+    Prueba get(Integer id);
+    Prueba update(Prueba prueba);
+    void delete(Prueba prueba);
 }

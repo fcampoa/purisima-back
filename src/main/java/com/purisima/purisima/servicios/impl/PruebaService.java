@@ -26,5 +26,25 @@ public class PruebaService implements IPruebaService{
     public List<Prueba> getAll() {
        return (List) this.pruebaRepository.findAll();
     }
+
+    @Override
+    public Prueba add(Prueba prueba) {
+        return this.pruebaRepository.save(prueba);
+    }
+
+    @Override
+    public Prueba get(Integer id) {
+        return this.pruebaRepository.findById(id).get();
+    }
+
+    @Override
+    public Prueba update(Prueba prueba) {
+        return this.pruebaRepository.save(prueba);
+    }
+
+    @Override
+    public void delete(Prueba prueba) {
+        this.pruebaRepository.delete(prueba);
+    }
     
 }
